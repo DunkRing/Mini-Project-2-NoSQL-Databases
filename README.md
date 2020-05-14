@@ -89,6 +89,7 @@ Insurance.line = "Residential",
 Insurance.construction = "Wood",
 Insurance.point_granularity = 1
 ```
+Complete in 2ms 
 
 **MongoDB**
 ```
@@ -100,8 +101,7 @@ db.insurence.insertOne({
  "point_longitude" : -81.702675, "line" : "Residential", "construction" : "Wood", "point_granularity" : 1 
 })
 ```
-
-
+used: .explain("executionStats") - which gave the result: _Complete in 0ms (might not be true..)_
 
 **3. How much space does the two database consume**
 
