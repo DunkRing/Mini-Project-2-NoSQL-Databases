@@ -114,7 +114,7 @@ used: .explain("executionStats") - which gave the result: _Complete in 0ms (migh
 
  - ![List item](https://github.com/DunkRing/Mini-Project-2-NoSQL-Databases/blob/master/img/Mongodb%20storage%20taken%20by%20csv%20file.JPG)
 
-**3. Selecet all elements from db**
+**4. Selecet all elements from db**
 
 **Neo4j** 
 ```
@@ -132,7 +132,7 @@ db.insurence.find() - quries all elements in the insurence collection
 
 Result was 10.00 seconds
 
-**4. How easy is it to setup**
+**5. How easy is it to setup**
 
 **Neo4j**
 very intuitive and easy to use GUI with alot of help, with error syntax and error handling.
