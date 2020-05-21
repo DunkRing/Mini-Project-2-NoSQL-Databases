@@ -44,6 +44,22 @@ const data = new Data({
 var t0 = Date.now()
 data.save();
 var t1 = Date.now()
-console.log("Insert one element " + (t1 - t0) + " milliseconds.")
+console.log("Insert one element time: " + (t1-t0) + " milliseconds.")
+
+// var array = [];
+// for (let index = 0; index < 501; index++) {
+//     var t0 = Date.now()
+//     data.save();
+//     var t1 = Date.now()
+//     var result = (t1 - t0);
+//     array.push(result);
+// };
+
+// var totalTime = 0;
+// array.forEach(element => {
+//     totalTime = totalTime + element;
+// });
+
+// console.log("Insert one element. avg. from 500 insters " + totalTime/500 + " milliseconds.")
 
 
