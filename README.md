@@ -3,7 +3,7 @@
 
 
 
-**Introduction**: In this project we want to examien multiple NoSQL databse and we the tow different database we have chosen is: Neo4j and MongoDB 
+**Introduction**: In this project we want to examine multiple NoSQL databse and we the two different databases we have chosen is: Neo4j and MongoDB 
 
 **Problem statement**: What are some of the key difference of MongoDB and Neo4J regarding storage, populate data, fetching data? 
 
@@ -13,9 +13,9 @@
 - **Neo4J** - Neo4j is a grapth database, designed to treat the relationshipts between data as equally important to the data itself. It is intended to hold data without constricting it to a pre defined model.
 
 ## 1.preparing a large data source and loading it into both databases
-As we said eariler, we want to see how fast each of the databases  could be populated, which is import if you a to populate a lot of data frequently.
+As mentioned eariler, we want to see how fast each of the databases could be populated, which is import if you have to populate a lot of data frequently.
 
-To have some data to play around with, we decided to download a CVS file containing 36.634 insurence samples of growth. [Datasheet Download, click here...](https://support.spatialkey.com/spatialkey-sample-csv-data/)
+To have some data to work with, we decided to download a CVS file containing 36.634 insurence samples of growth. [Datasheet Download, click here...](https://support.spatialkey.com/spatialkey-sample-csv-data/)
 
 ### Neo4j populations code 
 To poplulate the CSV file into Neo4j we had to run the following code inside of Neo4j Desktop
