@@ -28,12 +28,14 @@ Data.qx = toFloat(row.qx),
 Data.sx = toFloat(row.sx)    
 `;
 
+var startTime = Date.now();
 session.run(cypher)
     .then(result => {
         // On result, get count from first record
-        const count = result.records[0].get('count');
+        console.log(`time used to populate:`, Date.now() - startTime);
+   
         // Log response
-        console.log( count.toNumber() );
+    
     })
     .catch(e => {
         // Output the error
