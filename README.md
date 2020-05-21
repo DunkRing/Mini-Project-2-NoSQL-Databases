@@ -80,12 +80,25 @@ A average result of 500 tries.
 
 > **We are not happy with the result of this experiment, we surely know that something went wrong, Neo4j should be way slowlier.** 
 
-**Neo4j**
-**MongoDB**
-**How easy is it to setup**
-**Neo4j**
-very intuitive and easy to use GUI with alot of help, with error syntax and error handling.
-**MongoDB**
-## 3. reporting the results and conclusions
+## Conclusion & Reflection
+As we can see in our experiments is **MongoDB** consuming much less storage than **Neo4j**, this was expected since Neo4j is a graph database afterall, which gives the ability of navigation through graphs as a tree, but it also create the need of much more storage.
 
-Scaling? how can they work together? more in depth with pros and cons?
+We can also conclude that **MongoDB** is very efficient, by looking at our experiments, one of the reasons is that **MongoDB** does not create relationships between the database models, as each data set stored in the document store of the database is disaggregated and independent.
+
+Even though both of theese databases share some of the same advantages. We will take a look at them Individually.
+
+*So when should we use **MongoDB**?*
+
+When we want 
+
+ - High performance.
+ - High scalability.
+ - Document-based query language that’s nearly as powerful as SQL
+
+*So when should we use **Neo4j**?*
+
+When we want
+ - To find complex relationships.
+ - High scalability.
+ - 
+
