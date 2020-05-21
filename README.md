@@ -81,7 +81,7 @@ A average result of 500 tries.
 > **We are not happy with the result of this experiment, we surely know that something went wrong, Neo4j should be way slowlier.** 
 
 ## Conclusion & Reflection
-As we can see in our experiments is **MongoDB** consuming much less storage than **Neo4j**, this was expected since Neo4j is a graph database afterall, which gives the ability of navigation through graphs as a tree, but it also create the need of much more storage.
+As we can see in our experiments is **MongoDB** consuming much less storage than **Neo4j**, this was expected since Neo4j is a graph database afterall, which gives the ability of navigation through graphs as a tree, but it also create the need of much more storage which we saw though our experiments.
 
 We can also conclude that **MongoDB** is very efficient, by looking at our experiments, one of the reasons is that **MongoDB** does not create relationships between the database models, as each data set stored in the document store of the database is disaggregated and independent.
 
@@ -100,5 +100,4 @@ When we want
 When we want
  - To find complex relationships.
  - High scalability.
- - 
 
