@@ -14,7 +14,7 @@
 
 As we said eariler, we want to see how fast each of the databases could be populated, which is import if you a to populate a lot of data frequently.
 
-To have some data to work with, we decided to download a CVS file containing 19782 data samples. [Datasheet Download, click here...]([https://www.stats.govt.nz/assets/Uploads/New-Zealand-cohort-life-tables/New-Zealand-cohort-life-tables-March-2020-update/Download-data/complete-cohort-life-tables-1876-2018.csv](https://www.stats.govt.nz/assets/Uploads/New-Zealand-cohort-life-tables/New-Zealand-cohort-life-tables-March-2020-update/Download-data/complete-cohort-life-tables-1876-2018.csv))
+To have some data to work with, we decided to download a CVS file containing 19782 data samples. [Datasheet Download, click here...](https://www.stats.govt.nz/assets/Uploads/New-Zealand-cohort-life-tables/New-Zealand-cohort-life-tables-March-2020-update/Download-data/complete-cohort-life-tables-1876-2018.csv)
 
 ### MongoDB
 [Code for MongoDB populate](https://github.com/DunkRing/Mini-Project-2-NoSQL-Databases/blob/master/MongoDB/populateMongoDB.js)
