@@ -1,0 +1,19 @@
+{
+  "name": "miniproject-redo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "csv-parser": "^2.3.2",
+    "fs": "0.0.1-security",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.15",
+    "neo4j": "^2.0.0-RC2",
+    "neo4j-driver": "^4.0.2"
+  }
+}
