@@ -1,11 +1,24 @@
+
 # Mini-Project-2-NoSQL-Databases
 
 
-## 1.preparing a large data source and loading it into both databases
 
-We have found a datasheet containing 36634 insurence samples of growth.
-[Datasheet Download, click here...](https://support.spatialkey.com/spatialkey-sample-csv-data/)
+**Introduction**: In this project we want to examien multiple NoSQL databse and we the tow different database we have chosen is: Neo4j and MongoDB 
+
+**Problem statement**: What are some of the key difference of MongoDB and Neo4J regarding storage, populate data, fetching data? 
+
+***A short description of the two dabase:***
+ - **MongoDB** - MongoDB are an database that are based on storing a collection of documents, with each of these documents consisting of an key/value attribute. three keywords that the internet seems to use to describe MongoDB is: good performance, high availability and scalability.
+
+- **Neo4J** - Neo4j is a grapth database, designed to treat the relationshipts between data as equally important to the data itself. It is intended to hold data without constricting it to a pre defined model.
+
+## 1.preparing a large data source and loading it into both databases
+As we said eariler, we want to see how fast each of the databases  could be populated, which is import if you a to populate a lot of data frequently.
+
+To have some data to play around with, we decided to download a CVS file containing 36.634 insurence samples of growth. [Datasheet Download, click here...](https://support.spatialkey.com/spatialkey-sample-csv-data/)
+
 ### Neo4j populations code 
+To poplulate the CSV file into Neo4j we had to run the following code inside of Neo4j Desktop
 ```
 LOAD CSV WITH HEADERS FROM "file:///FL_insurance_sample.csv" 
 AS row MERGE (Insurance:Insurance {id:row.policyID}) 
@@ -28,19 +41,26 @@ Insurance.line = row.line,
 Insurance.construction = row.construction,
 Insurance.point_granularity= toInteger(row.point_granularity),
 ```
+Now we can see that the Neo4j database contains all the elements for the CVS file 
+![Neo4j populated](https://github.com/DunkRing/Mini-Project-2-NoSQL-Databases/blob/master/img/Neo4j%20database%20populated%20with%2036.000+%20elements.JPG)
 
 ### MongoDB 
-
-1. Cd path to mongofile
-2. whrite "mongod" 
-3. whrite "mongo" 
-
+Now we want to populate MongoDB, which we did through the Terminal in three steps. 
+1. frist we used the "cd-command" with the path to mongofile
+```
+cd "C:\Program Files\MongoDB\Server\4.2\bin"
+```
+3. When we want to run the application mongoDB server called "mongo" 
+```
+C:\Program Files\MongoDB\Server\4.2\bin>mongo
+``` 
+![MongoDB is running](https://github.com/DunkRing/Mini-Project-2-NoSQL-Databases/blob/master/img/mongo%20is%20running.JPG)
 *Now the server is startet and ready to use*
-Test by running the command in MongoDB terminal
-
+which we also Tested by running the command "show dbs" in MongoDB terminal
  ```
  show dbs
  ```
+ ![MongoDB is working](https://github.com/DunkRing/Mini-Project-2-NoSQL-Databases/blob/master/img/mongo%20is%20populated.JPG)
 
 **now load csv file to mongodb (only posibble from cmd)** 
 5. cd mongo path folder and drop the csv-file in here
