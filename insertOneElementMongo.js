@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 const csv = require('csv-parser')
 const fs = require('fs')
 const results = [];
-const allDataElement = [];
+
 
 //connection to mongodb server
 mongoose.connect("mongodb://localhost:27017/miniproject2", {useNewUrlParser: true, useUnifiedTopology: true});
 
 // https://www.stats.govt.nz/assets/Uploads/New-Zealand-cohort-life-tables/New-Zealand-cohort-life-tables-March-2020-update/Download-data/complete-cohort-life-tables-1876-2018.csv
 const dataSchema = new mongoose.Schema ({
-    id: Number,  
+    id: Number,
     yearofbirth: Number,
     sex: String,
     age: Number,
@@ -23,38 +23,27 @@ const dataSchema = new mongoose.Schema ({
     qx: Number,
     sx: Number,
 });
-
-
 var Data = mongoose.model('Data', dataSchema);
+//person.save();
 
-fs.createReadStream('data.csv')
-  .pipe(csv())
-  .on('data', (data) => results.push(data))
-  .on('end', () => {
-
-    //Printing csv parser result
-    //console.log(results);
-
-    results.forEach(element => {
-        allDataElement.push(element);
-    });
-
-    //Inserting all elements to MongoDB
-    var t0 = Date.now()
-    Data.collection.insert(allDataElement, function (err, docs) {
-        if (err){ 
-            return console.error(err);
-        } else {
-          var t1 = Date.now()
-          console.log("Multiple documents of data inserted to data Collection");
-          console.log("Populate data to MongoDB took " + (t1 - t0) + " milliseconds.")
-        }
-      });
-  });
+const data = new Data({
+    id: 9999999,
+    yearofbirth: 1996,
+    sex: 'male',
+    age: 23,
+    percentile: 5132512,
+    dx: 51235,
+    ex: 765,
+    llx: 1,
+    lx: 0.125,
+    mx: 0.532,
+    px: 33,
+    qx: 1,
+    sx: 2,
+});
+var t0 = Date.now()
+data.save();
+var t1 = Date.now()
+console.log("Insert one element " + (t1 - t0) + " milliseconds.")
 
 
-
-
-
-
-  
